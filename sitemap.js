@@ -6,8 +6,7 @@
 
   // Blogger 側の ID 差異を吸収
   const container =
-    document.getElementById("bp_toc") ||
-    document.getElementById("bp_toc_o");
+    document.getElementById("bp_toc") ;
 
   if (!container) return;
 
