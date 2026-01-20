@@ -1,10 +1,9 @@
 (function() {
   var config = window.EMBED_CONFIG || {};
-  var BLOG_URL = config.BLOG_URL || "";
-  var FEED_PATH = config.FEED_PATH || "/feeds/posts/summary";
+  var BLOG_URL = config.BLOG_URL || "https://tonpuku3fishing.blogspot.com";
   var SUFFIX = config.SUFFIX || "";
-  var CALLBACK_NAME = config.CALLBACK_NAME || "displayArticlesJSONP";
   var POST_HUB_BASE = "https://tonpukusan.github.io/index.html";
+  var CALLBACK_NAME = config.CALLBACK_NAME || "displayArticlesJSONP";
 
   function escapeHTML(str) {
     if (!str) return "";
@@ -42,7 +41,9 @@
     copyToClipboard(code);
   }
 
-  var nextUrl = BLOG_URL + FEED_PATH + "?alt=json&max-results=50&callback=" + CALLBACK_NAME;
+  var FEED_PATH = config.FEED_PATH || "/feeds/posts/summary";
+
+  var nextUrl = BLOG_URL + FEED_PATH + "?alt=json-in-script&max-results=50&callback=" + CALLBACK_NAME;
   var isFetching = false;
 
   function fetchArticlesAuto() {
@@ -198,6 +199,5 @@
     }
   }
 
-  // ✅ DOMが完全に構築されてから開始
-  window.onload = fetchArticlesAuto;
+  document.addEventListener("DOMContentLoaded", fetchArticlesAuto);
 })();
