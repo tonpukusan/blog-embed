@@ -1,25 +1,12 @@
-/* ====== 全体レイアウト ====== */
-#toc-content {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Helvetica", "Arial", sans-serif;
-}
-
-/* ====== 記事ブロック ====== */
 .article-block {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
   padding: 12px 0;
-  margin: 0;
 }
 
-/* ====== 記事ヘッダー（画像＋タイトル） ====== */
 .article-header {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 6px;
 }
 
 .article-header img {
@@ -27,9 +14,7 @@
 }
 
 .article-header a {
-  font-size: 15px;
   font-weight: bold;
-  color: #333;
   text-decoration: none;
 }
 
@@ -37,37 +22,33 @@
   text-decoration: underline;
 }
 
-/* ====== URL 表示 ====== */
 .article-url {
-  font-size: 12px;
-  color: #666;
-  margin-bottom: 8px;
+  margin: 6px 0;
+  font-size: 0.9rem;
+  color: #555;
   word-break: break-all;
 }
 
-/* ====== ボタン群 ====== */
 .toc-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
+  margin-top: 8px;
 }
 
-/* ====== ボタン共通 ====== */
 .copy-article-btn,
 .copy-url-btn,
 .blog-embed-btn,
 .x-share-btn a,
 .posthub-btn a {
   display: inline-block;
-  padding: 6px 10px;
-  font-size: 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  background: #f2f2f2;
-  color: #333;
-  border: 1px solid #ccc;
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white !important;
+  border-radius: 5px;
   text-decoration: none;
-  user-select: none;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .copy-article-btn:hover,
@@ -75,35 +56,5 @@
 .blog-embed-btn:hover,
 .x-share-btn a:hover,
 .posthub-btn a:hover {
-  background: #e6e6e6;
-}
-
-/* ====== X シェアボタン ====== */
-.x-share-btn a {
-  color: #1d9bf0;
-  border-color: #1d9bf0;
-}
-
-.x-share-btn a:hover {
-  background: #e8f4ff;
-}
-
-/* ====== 投稿ハブボタン ====== */
-.posthub-btn a {
-  color: #444;
-}
-
-/* ====== トースト通知 ====== */
-#ton3-toast {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: rgba(60, 60, 60, 0.9);
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 9999;
+  background-color: #45a049;
 }
